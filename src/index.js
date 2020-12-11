@@ -1,12 +1,19 @@
+import 'react-app-polyfill/ie11';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { HashRouter } from 'react-router-dom'
+import ScrollToTop from './ScrollToTop';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <HashRouter>
+          <ScrollToTop>
+              <App/>
+          </ScrollToTop>
+      </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
